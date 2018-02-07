@@ -1,0 +1,12 @@
+Version 8.2.1
+Id
+Min label:-50
+Max label:50
+bits:21
+lda:0
+0 ngram:
+0 skip:
+options: --quadratic AB --quadratic AC
+Checksum: 2259500140
+:0
+Constant:1164636:-inf

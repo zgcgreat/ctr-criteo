@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../计算广告/CTRipinyou/.idea/CTRipinyou.iml" filepath="$PROJECT_DIR$/../计算广告/CTRipinyou/.idea/CTRipinyou.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../计算广告/FCTF/.idea/FCTF.iml" filepath="$PROJECT_DIR$/../计算广告/FCTF/.idea/FCTF.iml" />
+      <module fileurl="file://$USER_HOME$/software/LightGBM-master/.idea/LightGBM-master.iml" filepath="$USER_HOME$/software/LightGBM-master/.idea/LightGBM-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../计算广告/RTB-ipinyou (复件)/.idea/RTB-ipinyou.iml" filepath="$PROJECT_DIR$/../计算广告/RTB-ipinyou (复件)/.idea/RTB-ipinyou.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../计算广告/ad-tencent/.idea/ad-tencent.iml" filepath="$PROJECT_DIR$/../计算广告/ad-tencent/.idea/ad-tencent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ctr-criteo.iml" filepath="$PROJECT_DIR$/.idea/ctr-criteo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../计算广告/deep-ctr-master/.idea/deep-ctr-master.iml" filepath="$PROJECT_DIR$/../计算广告/deep-ctr-master/.idea/deep-ctr-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../计算广告/graduation-project/.idea/graduation-project.iml" filepath="$PROJECT_DIR$/../计算广告/graduation-project/.idea/graduation-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../计算广告/make-ipinyou-data-master/.idea/make-ipinyou-data-master.iml" filepath="$PROJECT_DIR$/../计算广告/make-ipinyou-data-master/.idea/make-ipinyou-data-master.iml" />
+      <module fileurl="file://$USER_HOME$/tutorial/.idea/tutorial.iml" filepath="$USER_HOME$/tutorial/.idea/tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../机器学习/wx_itchat/.idea/wx_itchat.iml" filepath="$PROJECT_DIR$/../机器学习/wx_itchat/.idea/wx_itchat.iml" />
+    </modules>
+  </component>
+</project>

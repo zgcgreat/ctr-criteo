@@ -1,0 +1,55 @@
+# _*_ coding: utf-8 _*_
+
+import os
+import re
+import subprocess
+
+'''
+交叉验证
+'''
+
+solution = 'GBDT1.py'
+FOLD = 1
+
+data_path = '../../output/cross_validation_split/'
+results_path = '../../output/results/batch/' + solution + '/'
+
+# 建立目录
+if not os.path.exists(results_path):
+    for i in range(FOLD):
+        os.makedirs(results_path + 'split_{0}/'.format(i))
+
+# 测试
+for i in range(FOLD):
+    print('running ' + solution + ', round: ' + str(i))
+    cmd = 'python3.5 {solution} {data} {results}'.format(solution=solution, data=data_path + 'split_{0}/'
+                                                         .format(i), results=results_path + 'split_{0}/'.format(i))
+    subprocess.call(cmd, shell=True, stdout=subprocess.PIPE)
+
+    # 计算性能评价指标
+    cmd = 'python3.5 evaluate.py {data} {result}'.format(data=data_path + 'split_{0}/'.format(i),
+                                                         result=results_path + 'split_{0}/'.format(i))
+    subprocess.call(cmd, shell=True, stdout=subprocess.PIPE)
+
+# 分析结果汇总输出
+logloss = 0
+auc = 0
+
+auc_pattern = 'auc: ([0-9.e]+)'
+logloss_pattern = 'logloss: ([0-9.e]+)'
+
+for i in range(FOLD):
+    info = ''
+    read = open(results_path + 'split_{0}/details.txt'.format(i))
+    for line in read.readlines():
+        info += line
+    auc += float(re.search(auc_pattern, info).group(1))  # 在字符串内查找模式匹配
+    logloss += float(re.search(logloss_pattern, info).group(1))
+    read.close()
+
+logloss /= FOLD
+auc /= FOLD
+
+result = open(results_path + '{0}.txt'.format(solution.split('/')), 'w')
+result.write('Average logloss:{0}\nAverage AUC:{1}'.format(logloss, auc))
+result.close()

@@ -1,0 +1,14 @@
+*.o
+
+*.txt
+*.csv
+*.xls
+*.fm
+*.ffm
+*.addition
+*.dense
+*.sparse
+*.out
+*.vw
+*.normalized
+model
